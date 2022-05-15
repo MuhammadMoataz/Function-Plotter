@@ -3,13 +3,17 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # x axis values
-x = np.arange(-10, 10, 0.1)
+x_min = np.double(input("x min: "))
+x_max = np.double(input("x max: "))
+x = np.arange(x_min, x_max, 0.01)
 # corresponding y axis values
 # y = input("Enter the equation: ")
-y = 5*x
+# y : np.ndarray
+y = 5*x**2 + 3*x
+# y = np.ndarray(input("Enter the equation: "))
 
 # plotting the points
-plt.plot(x, y, label = "first line")
+plt.plot(x, y)
 
 
 
@@ -19,9 +23,9 @@ plt.xlabel('x - axis')
 plt.ylabel('y - axis')
 
 # giving a title to my graph
-plt.title('My first graph!')
+plt.title('Function Plotter!')
 
 #show legend
-plt.legend()
+# plt.legend()
 # function to show the plot
 plt.show()
